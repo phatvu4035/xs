@@ -92,7 +92,15 @@ textarea {
     font-weight: inherit;
 }
 legend {
-    color: #000;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: inherit;
+    color: #333;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
 }
 @font-face {
     font-family: Flaticon;
@@ -1205,14 +1213,14 @@ button.form-control {
     border-radius: 3px;
     cursor: pointer;
 }
-select.form-control {
-    width: 98%;
-    height: 37px;
+
+select.form-control:not([size]):not([multiple]) {
+    height: 34px;;
 }
+
 .form-control {
     border: 1px solid #dfdfdf;
     border-radius: 3px;
-    padding: 10px 0;
 }
 input.form-control,
 select.form-control,

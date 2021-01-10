@@ -27,7 +27,20 @@ $(document).ready(function(){
         var new_length=$(this).val();
         result_shortern('div.result_div#result_mb','mb',new_length);
     });
+
+    $('#date').datepicker({
+        autoclose:true,
+        language:'vi',
+        format:'d-m-yyyy',
+        endDate:new Date(),
+        todayBtn:'linked',
+        todayHighLight:true,
+        startDate:'-19y'
+    });
+    $('#date').datepicker('update','09-01-2021');
+    $('#count').TouchSpin({min:1,max:300,step:1,postfix:' ngày', buttondown_class: "btn btn-default", buttonup_class: "btn btn-default"});
 });
+
 
 function disable_combine(p_code,obj){
     set_disabled_days(p_code,obj);
