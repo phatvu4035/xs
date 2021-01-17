@@ -1,5 +1,5 @@
 * {
-    color: #414141;
+    /*color: #414141;*/
     font-family: Arial, sans-serif;
     font-size: 14px;
 }
@@ -318,6 +318,14 @@ legend {
 }
 .message-404 a {
     font-size: 20px;
+}
+
+.pad40-left {
+    padding-left: 40px;
+}
+
+.list-style-disc {
+    list-style-type: disc;
 }
 
 .body-container  {
@@ -1053,7 +1061,7 @@ legend {
     line-height: 16px;
 }
 .ddsmoothmenu ul li.home a {
-    padding: 13px 15px 13px;
+    padding: 15px 15px 14px;
 }
 .ddsmoothmenu ul li.home a i {
     color: #fff;
@@ -1200,9 +1208,6 @@ p.helper {
 p.helper span {
     font-size: 16px;
 }
-.form-group {
-    float: left;
-}
 .form-group .label {
     margin-bottom: 10px;
     font-weight: 700;
@@ -1331,6 +1336,14 @@ button.button-submit {
     border: 1px solid transparent;
     border-radius: 4px;
 }
+
+.btn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
 .btn.btn-small {
     padding: 3px 7px;
 }
@@ -2186,5 +2199,18 @@ ul.more-news li a img {
 }
 
 .copyright-info {
+    margin-bottom: 10px;
+}
+
+#number_selector>thead>tr.info>th, .scroll table>thead>tr.info>th, .scroll table>tbody>tr>td.info, #number_selector>tbody>tr>td.info, .table>tbody>tr.info>td {
+    background-color: #d9edf7;
+}
+
+.panel-body .table .kqbackground {
+    background-color: #fff;
+}
+
+.marh3 {
+    margin-top: 20px;
     margin-bottom: 10px;
 }

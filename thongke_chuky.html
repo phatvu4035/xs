@@ -193,465 +193,290 @@
         <div class="col-sm-7">
             <div class="panel panel-default">
                 <div class="panel-heading center">
-                    <h4 class="right-menu-title"> Sổ kết quả</h4>
+                    <h4 class="right-menu-title">Thống kê chu kỳ dài nhất bộ số không ra</h4>
                 </div>
                 <div class="panel-body">
-                    <form method="POST" action="/so-ket-qua" id="so-ket-qua">
-                        <div class="row row-margin-7">
-                            <div class="form-group col-sm-4 sm-padding-7">
-                                <label for="code">Tỉnh</label>
-                                <select name="code" id="code" class="form-control">
-                                    <option value="mb" selected="">Truyền Thống</option>
-                                    <option value="123">Điện Toán 123</option>
-                                    <option value="636">Điện Toán 6x36</option>
-                                    <option value="tt4">Thần Tài</option>
-                                    <option value="ag">An Giang</option>
-                                    <option value="bl">Bạc Liêu</option>
-                                    <option value="bdu">Bình Dương</option>
-                                    <option value="bdi">Bình Định</option>
-                                    <option value="bp">Bình Phước</option>
-                                    <option value="bth">Bình Thuận</option>
-                                    <option value="btr">Bến Tre</option>
-                                    <option value="cm">Cà Mau</option>
-                                    <option value="ct">Cần Thơ</option>
-                                    <option value="dlt">Đà Lạt</option>
-                                    <option value="dna">Đà Nẵng</option>
-                                    <option value="dlc">Đắc Lắc</option>
-                                    <option value="dno">Đắc Nông</option>
-                                    <option value="dni">Đồng Nai</option>
-                                    <option value="dt">Đồng Tháp</option>
-                                    <option value="gl">Gia Lai</option>
-                                    <option value="hg">Hậu Giang</option>
-                                    <option value="hcm">Hồ Chí Minh</option>
-                                    <option value="kg">Kiên Giang</option>
-                                    <option value="kh">Khánh Hoà</option>
-                                    <option value="kt">Kon Tum</option>
-                                    <option value="la">Long An</option>
-                                    <option value="nt">Ninh Thuận</option>
-                                    <option value="py">Phú Yên</option>
-                                    <option value="qb">Quảng Bình</option>
-                                    <option value="qna">Quảng Nam</option>
-                                    <option value="qng">Quảng Ngãi</option>
-                                    <option value="qt">Quảng Trị</option>
-                                    <option value="st">Sóc Trăng</option>
-                                    <option value="tn">Tây Ninh</option>
-                                    <option value="tth">Thừa Thiên Huế</option>
-                                    <option value="tg">Tiền Giang</option>
-                                    <option value="tv">Trà Vinh</option>
-                                    <option value="vl">Vĩnh Long</option>
-                                    <option value="vt">Vũng Tàu</option>
-                                    <option value="mg645">Vietlott Mega 6/45</option>
-                                    <option value="mg4d">Vietlott Max 4D</option>
-                                    <option value="mg3d">Vietlott Max 3D</option>
-                                    <option value="mg655">Vietlott Power 6/55</option>
-                                    <option value="mgkeno">Vietlott Keno</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-sm-3 sm-padding-7">
-                                <label for="date">Biên độ ngày</label>
-                                <input type="text" class="form-control" id="date" name="date">
-                            </div>
-                            <div class="form-group col-sm-3 sm-padding-7">
-                                <label for="count">Số ngày <span class="vietthuong">(max= 300)</span></label>
-                                <input type="text" class="form-control" id="count" value="30">
-                            </div>
-                        </div>
-                        <div class="row row-margin-7">
-                            <div class="btn-group col-sm-10 form-group sm-padding-7" role="group" aria-label="quickSwitch"
-                                 style="display: flex;">
-                                <button class="btn btn-info"
-                                        onclick="if (!window.__cfRLUnblockHandlers) return false; kqv1.skq_quick_submit(10)">
-                                    10 ngày
-                                </button>
-                                <button class="btn btn-info"
-                                        onclick="if (!window.__cfRLUnblockHandlers) return false; kqv1.skq_quick_submit(20)">
-                                    20 ngày
-                                </button>
-                                <button class="btn btn-danger"
-                                        onclick="if (!window.__cfRLUnblockHandlers) return false; kqv1.skq_quick_submit(30)">
-                                    30 ngày
-                                </button>
-                                <button class="btn btn-info"
-                                        onclick="if (!window.__cfRLUnblockHandlers) return false; kqv1.skq_quick_submit(60)">
-                                    60 ngày
-                                </button>
-                                <button class="btn btn-info"
-                                        onclick="if (!window.__cfRLUnblockHandlers) return false; kqv1.skq_quick_submit(90)">
-                                    90 ngày
-                                </button>
-                                <button class="btn btn-info"
-                                        onclick="if (!window.__cfRLUnblockHandlers) return false; kqv1.skq_quick_submit(200)">
-                                    200 ngày
-                                </button>
-                                <button class="btn btn-info"
-                                        onclick="if (!window.__cfRLUnblockHandlers) return false; kqv1.skq_quick_submit(250)">
-                                    250 ngày
-                                </button>
-                                <button class="btn btn-info"
-                                        onclick="if (!window.__cfRLUnblockHandlers) return false; kqv1.skq_quick_submit(300)">
-                                    300 ngày
-                                </button>
-                                <button class="btn btn-success" style="flex: 1;"
-                                        onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('https://www.thantai.net/so-ket-qua'); return false;">
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-phone"
-                                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                              d="M11 1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"></path>
-                                        <path fill-rule="evenodd" d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
-                                    </svg>
-                                    Mobile
-                                </button>
-                            </div>
-                        </div>
-                        <div class="row row-margin-7">
-                            <div class="form-group col-sm-3 offset-sm-4 sm-padding-7">
-                                <button type="submit" class="btn btn-primary">Xem kết quả</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading center"><h4 class="right-menu-title">Sổ kết quả Truyền Thống - Tổng hợp kết
-                    quả xổ số miền bắc, tra cứu kqxs</h4></div>
-                <div class="panel-body">
-                    <div class="kqbackground vien tb-phoi">
-                        <div id="outer_result_mb">
-                            <div class="result_div " id="result_mb">
-                                <div class="row">
-                                    <div class="col-sm-6 tb-phoi-6">
-                                        <div class="color333">
-                                            <table class="table table-condensed kqcenter kqvertimarginw table-kq-border table-kq-hover-div table-bordered kqbackground table-kq-bold-border tb-phoi-border watermark table-striped"
-                                                   id="result_tab_mb">
-                                                <thead>
-                                                <tr class="title_row">
-                                                    <td class="color333" colspan="2">
-
-                                                        <div class="col-sm-10">
-                                                            <span class=" chu15" id="result_date">Thứ bảy ngày 09-01-2021</span>
-
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <td class="hover"
-                                                        style="width:22%;vertical-align:middle;font-size:16px;">Ký tự
-                                                    </td>
-                                                    <td style="padding: 0;" class="hover">
-                                                        <div class="row-no-gutters text-center">
-                                                            <div id="rs_8_0"
-                                                                 style="width:100%; position: relative; float: left;"
-                                                                 class="phoi-size chu18 gray need_blank hover"
-                                                                 rs_len="4" data-pattern="[0-9]{1,2}[A-Z]{2}"
-                                                                 data-sofar="15VT-10VT-6VT-4VT-1VT-2VT"
-                                                                 data-rolling-special="1" data-group-count="6">
-                                                                15VT-10VT-6VT-4VT-1VT-2VT
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="hover"
-                                                        style="width:22%;vertical-align:middle;font-size:16px;color:red;">
-                                                        Đặc biệt
-                                                    </td>
-                                                    <td style="padding: 0;" class="">
-                                                        <div class="row-no-gutters text-center">
-                                                            <div id="rs_0_0"
-                                                                 style="width:100%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam phoi-size chu30 maudo stop-reload hover"
-                                                                 rs_len="5" data-pattern="[0-9]{5}" data-sofar="82064">
-                                                                82064
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="hover"
-                                                        style="width:22%;vertical-align:middle;font-size:16px;">Giải
-                                                        nhất
-                                                    </td>
-                                                    <td style="padding: 0;" class="">
-                                                        <div class="row-no-gutters text-center">
-                                                            <div id="rs_1_0"
-                                                                 style="width:100%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam hover"
-                                                                 rs_len="5" data-pattern="[0-9]{5}" data-sofar="08356">
-                                                                08356
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="hover"
-                                                        style="width:22%;vertical-align:middle;font-size:16px;">Giải nhì
-                                                    </td>
-                                                    <td style="padding: 0;" class="">
-                                                        <div class="row-no-gutters text-center">
-                                                            <div id="rs_2_0"
-                                                                 style="width:50%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-right hover"
-                                                                 rs_len="5" data-pattern="[0-9]{5}" data-sofar="61215">
-                                                                61215
-                                                            </div>
-                                                            <div id="rs_2_1"
-                                                                 style="width:50%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam hover"
-                                                                 rs_len="5" data-pattern="[0-9]{5}" data-sofar="80388">
-                                                                80388
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="hover"
-                                                        style="width:22%;vertical-align:middle;font-size:16px;">Giải ba
-                                                    </td>
-                                                    <td style="padding: 0;" class="">
-                                                        <div class="row-no-gutters text-center">
-                                                            <div id="rs_3_0"
-                                                                 style="width:33.333333333333%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-bottom border-right hover"
-                                                                 rs_len="5" data-pattern="[0-9]{5}" data-sofar="89490">
-                                                                89490
-                                                            </div>
-                                                            <div id="rs_3_1"
-                                                                 style="width:33.333333333333%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-bottom border-right hover"
-                                                                 rs_len="5" data-pattern="[0-9]{5}" data-sofar="11130">
-                                                                11130
-                                                            </div>
-                                                            <div id="rs_3_2"
-                                                                 style="width:33.333333333333%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-bottom hover"
-                                                                 rs_len="5" data-pattern="[0-9]{5}" data-sofar="17716">
-                                                                17716
-                                                            </div>
-                                                            <div id="rs_3_3"
-                                                                 style="width:33.333333333333%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-right hover"
-                                                                 rs_len="5" data-pattern="[0-9]{5}" data-sofar="79887">
-                                                                79887
-                                                            </div>
-                                                            <div id="rs_3_4"
-                                                                 style="width:33.333333333333%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-right hover"
-                                                                 rs_len="5" data-pattern="[0-9]{5}" data-sofar="06388">
-                                                                06388
-                                                            </div>
-                                                            <div id="rs_3_5"
-                                                                 style="width:33.333333333333%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam hover"
-                                                                 rs_len="5" data-pattern="[0-9]{5}" data-sofar="26929">
-                                                                26929
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="hover"
-                                                        style="width:22%;vertical-align:middle;font-size:16px;">Giải tư
-                                                    </td>
-                                                    <td style="padding: 0;" class="">
-                                                        <div class="row-no-gutters text-center">
-                                                            <div id="rs_4_0"
-                                                                 style="width:25%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-right hover"
-                                                                 rs_len="4" data-pattern="[0-9]{4}" data-sofar="2573">
-                                                                2573
-                                                            </div>
-                                                            <div id="rs_4_1"
-                                                                 style="width:25%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-right hover"
-                                                                 rs_len="4" data-pattern="[0-9]{4}" data-sofar="9123">
-                                                                9123
-                                                            </div>
-                                                            <div id="rs_4_2"
-                                                                 style="width:25%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-right hover"
-                                                                 rs_len="4" data-pattern="[0-9]{4}" data-sofar="3390">
-                                                                3390
-                                                            </div>
-                                                            <div id="rs_4_3"
-                                                                 style="width:25%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam hover"
-                                                                 rs_len="4" data-pattern="[0-9]{4}" data-sofar="3611">
-                                                                3611
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="hover"
-                                                        style="width:22%;vertical-align:middle;font-size:16px;">Giải năm
-                                                    </td>
-                                                    <td style="padding: 0;" class="">
-                                                        <div class="row-no-gutters text-center">
-                                                            <div id="rs_5_0"
-                                                                 style="width:33.333333333333%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-bottom border-right hover"
-                                                                 rs_len="4" data-pattern="[0-9]{4}" data-sofar="9538">
-                                                                9538
-                                                            </div>
-                                                            <div id="rs_5_1"
-                                                                 style="width:33.333333333333%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-bottom border-right hover"
-                                                                 rs_len="4" data-pattern="[0-9]{4}" data-sofar="3684">
-                                                                3684
-                                                            </div>
-                                                            <div id="rs_5_2"
-                                                                 style="width:33.333333333333%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-bottom hover"
-                                                                 rs_len="4" data-pattern="[0-9]{4}" data-sofar="3274">
-                                                                3274
-                                                            </div>
-                                                            <div id="rs_5_3"
-                                                                 style="width:33.333333333333%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-right hover"
-                                                                 rs_len="4" data-pattern="[0-9]{4}" data-sofar="2415">
-                                                                2415
-                                                            </div>
-                                                            <div id="rs_5_4"
-                                                                 style="width:33.333333333333%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-right hover"
-                                                                 rs_len="4" data-pattern="[0-9]{4}" data-sofar="2095">
-                                                                2095
-                                                            </div>
-                                                            <div id="rs_5_5"
-                                                                 style="width:33.333333333333%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam hover"
-                                                                 rs_len="4" data-pattern="[0-9]{4}" data-sofar="3665">
-                                                                3665
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="hover"
-                                                        style="width:22%;vertical-align:middle;font-size:16px;">Giải sáu
-                                                    </td>
-                                                    <td style="padding: 0;" class="">
-                                                        <div class="row-no-gutters text-center">
-                                                            <div id="rs_6_0"
-                                                                 style="width:33.333333333333%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-right hover"
-                                                                 rs_len="3" data-pattern="[0-9]{3}" data-sofar="751">751
-                                                            </div>
-                                                            <div id="rs_6_1"
-                                                                 style="width:33.333333333333%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-right hover"
-                                                                 rs_len="3" data-pattern="[0-9]{3}" data-sofar="900">900
-                                                            </div>
-                                                            <div id="rs_6_2"
-                                                                 style="width:33.333333333333%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam hover"
-                                                                 rs_len="3" data-pattern="[0-9]{3}" data-sofar="277">277
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="hover"
-                                                        style="width:22%;vertical-align:middle;font-size:16px;">Giải bảy
-                                                    </td>
-                                                    <td style="padding: 0;" class="">
-                                                        <div class="row-no-gutters text-center">
-                                                            <div id="rs_7_0"
-                                                                 style="width:25%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-right hover"
-                                                                 rs_len="2" data-pattern="[0-9]{2}" data-sofar="54">54
-                                                            </div>
-                                                            <div id="rs_7_1"
-                                                                 style="width:25%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-right hover"
-                                                                 rs_len="2" data-pattern="[0-9]{2}" data-sofar="40">40
-                                                            </div>
-                                                            <div id="rs_7_2"
-                                                                 style="width:25%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam border-right hover"
-                                                                 rs_len="2" data-pattern="[0-9]{2}" data-sofar="02">02
-                                                            </div>
-                                                            <div id="rs_7_3"
-                                                                 style="width:25%; position: relative; float: left;"
-                                                                 class="phoi-size chu22 gray need_blank vietdam hover"
-                                                                 rs_len="2" data-pattern="[0-9]{2}" data-sofar="17">17
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                            <script type="text/javascript">$(document).ready(function () {
-                                                $('input:radio[name=mb_result_length]').change(function () {
-                                                    var new_length = $(this).val();
-                                                    result_shortern('div.result_div#result_mb', 'mb', new_length);
-                                                });
-                                            });</script>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4 tb-phoi-4">
-                                        <table class="table table-hover table-bordered table-condensed table-kq-north-west table-kq-border table-kq-bold-border kqbackground table-kq-hover"
-                                               style="margin-left: 3px;" id="dau_mb">
-                                            <thead>
-                                            <tr>
-                                                <td style="width:22%;">Đầu</td>
-                                                <td class="bang_kqnhanh_bold_bottomw">Lô tô</td>
-                                            </tr>
-                                            </thead>
-                                            <tbody style="font-weight:bold;">
-                                            <tr>
-                                                <td class="dosam chu15 kqcenter">0</td>
-                                                <td id="begin_with_0" class="chu17 need_blank">00; 02;</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="dosam chu15 kqcenter">1</td>
-                                                <td id="begin_with_1" class="chu17 need_blank">11; 15; 15; 16; 17;</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="dosam chu15 kqcenter">2</td>
-                                                <td id="begin_with_2" class="chu17 need_blank">23; 29;</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="dosam chu15 kqcenter">3</td>
-                                                <td id="begin_with_3" class="chu17 need_blank">30; 38;</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="dosam chu15 kqcenter">4</td>
-                                                <td id="begin_with_4" class="chu17 need_blank">40;</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="dosam chu15 kqcenter">5</td>
-                                                <td id="begin_with_5" class="chu17 need_blank">51; 54; 56;</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="dosam chu15 kqcenter">6</td>
-                                                <td id="begin_with_6" class="chu17 need_blank"><span
-                                                        class="maudo">64</span>; 65;
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="dosam chu15 kqcenter">7</td>
-                                                <td id="begin_with_7" class="chu17 need_blank">73; 74; 77;</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="dosam chu15 kqcenter">8</td>
-                                                <td id="begin_with_8" class="chu17 need_blank">84; 87; 88; 88;</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="dosam chu15 kqcenter">9</td>
-                                                <td id="begin_with_9" class="chu17 need_blank">90; 90; 95;</td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                    <form class="form-horizontal" id="chuky_form" method="POST">
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="code" class="col-sm-2 control-label">Tỉnh</label>
+                                <div class="col-sm-3">
+                                    <select name="code" id="code" class="form-control">
+                                        <option value="mb" selected="">Truyền Thống</option><option value="ag">An Giang</option><option value="bl">Bạc Liêu</option><option value="bdu">Bình Dương</option><option value="bdi">Bình Định</option><option value="bp">Bình Phước</option><option value="bth">Bình Thuận</option><option value="btr">Bến Tre</option><option value="cm">Cà Mau</option><option value="ct">Cần Thơ</option><option value="dlt">Đà Lạt</option><option value="dna">Đà Nẵng</option><option value="dlc">Đắc Lắc</option><option value="dno">Đắc Nông</option><option value="dni">Đồng Nai</option><option value="dt">Đồng Tháp</option><option value="gl">Gia Lai</option><option value="hg">Hậu Giang</option><option value="hcm">Hồ Chí Minh</option><option value="kg">Kiên Giang</option><option value="kh">Khánh Hoà</option><option value="kt">Kon Tum</option><option value="la">Long An</option><option value="nt">Ninh Thuận</option><option value="py">Phú Yên</option><option value="qb">Quảng Bình</option><option value="qna">Quảng Nam</option><option value="qng">Quảng Ngãi</option><option value="qt">Quảng Trị</option><option value="st">Sóc Trăng</option><option value="tn">Tây Ninh</option><option value="tth">Thừa Thiên Huế</option><option value="tg">Tiền Giang</option><option value="tv">Trà Vinh</option><option value="vl">Vĩnh Long</option><option value="vt">Vũng Tàu</option> </select>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="submit" class="btn btn-primary daudong"><i class="fa fa-arrow-right"></i> Chọn tỉnh</button>
                                 </div>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="numbers" class="col-sm-2 control-label">Bộ số</label>
+                                <div class="col-sm-7">
+                                    <textarea class="form-control" rows="2" id="numbers" name="numbers" placeholder="Điền các bộ số bạn muốn xem (ngăn cách bằng dấu phẩy hoặc cách). Để trống để xem mọi bộ số"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="chu15 daudong vietnghieng" style="padding-top:5px;"><span class="maudo"> Hướng dẫn</span>: B1 - Chọn tỉnh. =&gt; B2 - Chọn nhanh bộ số muốn xem (<span class="maudo">KHÔNG</span> cần bấm Enter). Bấm TRỢ GIÚP để xem thêm hướng dẫn.</p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="kqbackground vien">
+                <script src="//static.ketqua.net/custom_js/chuky-v1.js" type="text/javascript"></script>
+                <div class="panel panel-default">
+                    <div class="panel-heading center"><h4 class="right-menu-title">Thống kê chu kỳ Truyền Thống, tần suất xổ số, loto miền bắc, truyền thống, miền nam - KetQua.net</h4></div>
+                    <div class="panel-body">
+                        <table class="table-kq-bold-border kqbackground table table-condensed table-bordered qtk-hover">
+                            <thead>
+                            <tr class="info dosam">
+                                <th class="center">Bộ số</th>
+                                <th class="center">Chu kỳ dài nhất không về</th>
+                                <th class="center">Khoảng thời gian của chu kỳ</th>
+                                <th class="center">Ngày xuất hiện gần đây nhất</th>
+                            </tr>
+                            </thead>
+                            <tbody class="center">
+                            <tr id="0" style="display: table-row;">
+                                <td><b>00</b></td>
+                                <td>28</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=10-07-2018" target="_blank">10-07-2018</a> đến <a href="/xo-so-truyen-thong.php?ngay=08-08-2018" target="_blank">08-08-2018</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/09-01-2021.html" target="_blank">09-01-2021</a> - (4 lượt quay trước)</td>
+                            </tr>
+                            <tr id="1" style="display: table-row;">
+                                <td><b>01</b></td>
+                                <td>24</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=26-12-2004" target="_blank">26-12-2004</a> đến <a href="/xo-so-truyen-thong.php?ngay=20-01-2005" target="_blank">20-01-2005</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/12-01-2021.html" target="_blank">12-01-2021</a> - (1 lượt quay trước)</td>
+                            </tr>
+                            <tr id="2" style="display: table-row;">
+                                <td><b>02</b></td>
+                                <td>22</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=03-07-2017" target="_blank">03-07-2017</a> đến <a href="/xo-so-truyen-thong.php?ngay=26-07-2017" target="_blank">26-07-2017</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/09-01-2021.html" target="_blank">09-01-2021</a> - (4 lượt quay trước)</td>
+                            </tr>
+                            <tr id="3" style="display: table-row;">
+                                <td><b>03</b></td>
+                                <td>33</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=18-10-2003" target="_blank">18-10-2003</a> đến <a href="/xo-so-truyen-thong.php?ngay=21-11-2003" target="_blank">21-11-2003</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/08-01-2021.html" target="_blank">08-01-2021</a> - (5 lượt quay trước)</td>
+                            </tr>
+                            <tr id="4" style="display: table-row;">
+                                <td><b>04</b></td>
+                                <td>34</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=23-11-2016" target="_blank">23-11-2016</a> đến <a href="/xo-so-truyen-thong.php?ngay=28-12-2016" target="_blank">28-12-2016</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/05-01-2021.html" target="_blank">05-01-2021</a> - (8 lượt quay trước)</td>
+                            </tr>
+                            <tr id="5" style="display: table-row;">
+                                <td><b>05</b></td>
+                                <td>26</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=19-11-2002" target="_blank">19-11-2002</a> đến <a href="/xo-so-truyen-thong.php?ngay=16-12-2002" target="_blank">16-12-2002</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/12-01-2021.html" target="_blank">12-01-2021</a> - (1 lượt quay trước)</td>
+                            </tr>
+                            <tr id="6" style="display: table-row;">
+                                <td><b>06</b></td>
+                                <td>25</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=17-08-2008" target="_blank">17-08-2008</a> đến <a href="/xo-so-truyen-thong.php?ngay=12-09-2008" target="_blank">12-09-2008</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/12-01-2021.html" target="_blank">12-01-2021</a> - (1 lượt quay trước)</td>
+                            </tr>
+                            <tr id="7" style="display: table-row;">
+                                <td><b>07</b></td>
+                                <td>28</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=28-07-2013" target="_blank">28-07-2013</a> đến <a href="/xo-so-truyen-thong.php?ngay=26-08-2013" target="_blank">26-08-2013</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/11-01-2021.html" target="_blank">11-01-2021</a> - (2 lượt quay trước)</td>
+                            </tr>
+                            <tr id="8" style="display: table-row;">
+                                <td><b>08</b></td>
+                                <td>34</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=13-07-2003" target="_blank">13-07-2003</a> đến <a href="/xo-so-truyen-thong.php?ngay=17-08-2003" target="_blank">17-08-2003</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/11-01-2021.html" target="_blank">11-01-2021</a> - (2 lượt quay trước)</td>
+                            </tr>
+                            <tr id="9" style="display: table-row;">
+                                <td><b>09</b></td>
+                                <td>26</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=15-07-2008" target="_blank">15-07-2008</a> đến <a href="/xo-so-truyen-thong.php?ngay=11-08-2008" target="_blank">11-08-2008</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/13-01-2021.html" target="_blank">13-01-2021</a> - (0 lượt quay trước)</td>
+                            </tr>
+                            <tr id="10" style="display: table-row;">
+                                <td><b>10</b></td>
+                                <td>35</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=16-07-2007" target="_blank">16-07-2007</a> đến <a href="/xo-so-truyen-thong.php?ngay=21-08-2007" target="_blank">21-08-2007</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/11-01-2021.html" target="_blank">11-01-2021</a> - (2 lượt quay trước)</td>
+                            </tr>
+                            <tr id="11" style="display: table-row;">
+                                <td><b>11</b></td>
+                                <td>27</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=28-06-2018" target="_blank">28-06-2018</a> đến <a href="/xo-so-truyen-thong.php?ngay=26-07-2018" target="_blank">26-07-2018</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/12-01-2021.html" target="_blank">12-01-2021</a> - (1 lượt quay trước)</td>
+                            </tr>
+                            <tr id="12" style="display: table-row;">
+                                <td><b>12</b></td>
+                                <td>25</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=10-06-2008" target="_blank">10-06-2008</a> đến <a href="/xo-so-truyen-thong.php?ngay=06-07-2008" target="_blank">06-07-2008</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/06-01-2021.html" target="_blank">06-01-2021</a> - (7 lượt quay trước)</td>
+                            </tr>
+                            <tr id="13" style="display: table-row;">
+                                <td><b>13</b></td>
+                                <td>35</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=29-08-2003" target="_blank">29-08-2003</a> đến <a href="/xo-so-truyen-thong.php?ngay=04-10-2003" target="_blank">04-10-2003</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/13-01-2021.html" target="_blank">13-01-2021</a> - (0 lượt quay trước)</td>
+                            </tr>
+                            <tr id="14" style="display: table-row;">
+                                <td><b>14</b></td>
+                                <td>33</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=13-01-2020" target="_blank">13-01-2020</a> đến <a href="/xo-so-truyen-thong.php?ngay=20-02-2020" target="_blank">20-02-2020</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/13-01-2021.html" target="_blank">13-01-2021</a> - (0 lượt quay trước)</td>
+                            </tr>
+                            <tr id="15" style="display: table-row;">
+                                <td><b>15</b></td>
+                                <td>27</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=13-08-2019" target="_blank">13-08-2019</a> đến <a href="/xo-so-truyen-thong.php?ngay=10-09-2019" target="_blank">10-09-2019</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/10-01-2021.html" target="_blank">10-01-2021</a> - (3 lượt quay trước)</td>
+                            </tr>
+                            <tr id="16" style="display: table-row;">
+                                <td><b>16</b></td>
+                                <td>43</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=27-10-2007" target="_blank">27-10-2007</a> đến <a href="/xo-so-truyen-thong.php?ngay=10-12-2007" target="_blank">10-12-2007</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/13-01-2021.html" target="_blank">13-01-2021</a> - (0 lượt quay trước)</td>
+                            </tr>
+                            <tr id="17" style="display: table-row;">
+                                <td><b>17</b></td>
+                                <td>29</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=20-08-2017" target="_blank">20-08-2017</a> đến <a href="/xo-so-truyen-thong.php?ngay=19-09-2017" target="_blank">19-09-2017</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/11-01-2021.html" target="_blank">11-01-2021</a> - (2 lượt quay trước)</td>
+                            </tr>
+                            <tr id="18" style="display: table-row;">
+                                <td><b>18</b></td>
+                                <td>30</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=16-09-2015" target="_blank">16-09-2015</a> đến <a href="/xo-so-truyen-thong.php?ngay=17-10-2015" target="_blank">17-10-2015</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/07-01-2021.html" target="_blank">07-01-2021</a> - (6 lượt quay trước)</td>
+                            </tr>
+                            <tr id="19" style="display: table-row;">
+                                <td><b>19</b></td>
+                                <td>26</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=18-04-2009" target="_blank">18-04-2009</a> đến <a href="/xo-so-truyen-thong.php?ngay=15-05-2009" target="_blank">15-05-2009</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/06-01-2021.html" target="_blank">06-01-2021</a> - (7 lượt quay trước)</td>
+                            </tr>
+                            <tr id="20" style="display: table-row;">
+                                <td><b>20</b></td>
+                                <td>25</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=03-10-2010" target="_blank">03-10-2010</a> đến <a href="/xo-so-truyen-thong.php?ngay=29-10-2010" target="_blank">29-10-2010</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/12-01-2021.html" target="_blank">12-01-2021</a> - (1 lượt quay trước)</td>
+                            </tr>
+                            <tr id="21" style="display: table-row;">
+                                <td><b>21</b></td>
+                                <td>28</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=10-05-2016" target="_blank">10-05-2016</a> đến <a href="/xo-so-truyen-thong.php?ngay=08-06-2016" target="_blank">08-06-2016</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/06-01-2021.html" target="_blank">06-01-2021</a> - (7 lượt quay trước)</td>
+                            </tr>
+                            <tr id="22" style="display: table-row;">
+                                <td><b>22</b></td>
+                                <td>30</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=07-06-2007" target="_blank">07-06-2007</a> đến <a href="/xo-so-truyen-thong.php?ngay=08-07-2007" target="_blank">08-07-2007</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/31-12-2020.html" target="_blank">31-12-2020</a> - (13 lượt quay trước)</td>
+                            </tr>
+                            <tr id="23" style="display: table-row;">
+                                <td><b>23</b></td>
+                                <td>37</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=05-04-2006" target="_blank">05-04-2006</a> đến <a href="/xo-so-truyen-thong.php?ngay=13-05-2006" target="_blank">13-05-2006</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/09-01-2021.html" target="_blank">09-01-2021</a> - (4 lượt quay trước)</td>
+                            </tr>
+                            <tr id="24" style="display: table-row;">
+                                <td><b>24</b></td>
+                                <td>26</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=08-12-2002" target="_blank">08-12-2002</a> đến <a href="/xo-so-truyen-thong.php?ngay=04-01-2003" target="_blank">04-01-2003</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/05-01-2021.html" target="_blank">05-01-2021</a> - (8 lượt quay trước)</td>
+                            </tr>
+                            <tr id="25" style="display: table-row;">
+                                <td><b>25</b></td>
+                                <td>28</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=06-05-2003" target="_blank">06-05-2003</a> đến <a href="/xo-so-truyen-thong.php?ngay=04-06-2003" target="_blank">04-06-2003</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/03-01-2021.html" target="_blank">03-01-2021</a> - (10 lượt quay trước)</td>
+                            </tr>
+                            <tr id="26" style="display: table-row;">
+                                <td><b>26</b></td>
+                                <td>41</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=22-10-2003" target="_blank">22-10-2003</a> đến <a href="/xo-so-truyen-thong.php?ngay=03-12-2003" target="_blank">03-12-2003</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/08-01-2021.html" target="_blank">08-01-2021</a> - (5 lượt quay trước)</td>
+                            </tr>
+                            <tr id="27" style="display: table-row;">
+                                <td><b>27</b></td>
+                                <td>24</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=20-02-2012" target="_blank">20-02-2012</a> đến <a href="/xo-so-truyen-thong.php?ngay=16-03-2012" target="_blank">16-03-2012</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/08-01-2021.html" target="_blank">08-01-2021</a> - (5 lượt quay trước)</td>
+                            </tr>
+                            <tr id="28" style="display: table-row;">
+                                <td><b>28</b></td>
+                                <td>30</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=15-07-2015" target="_blank">15-07-2015</a> đến <a href="/xo-so-truyen-thong.php?ngay=15-08-2015" target="_blank">15-08-2015</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/03-01-2021.html" target="_blank">03-01-2021</a> - (10 lượt quay trước)</td>
+                            </tr>
+                            <tr id="29" style="display: table-row;">
+                                <td><b>29</b></td>
+                                <td>26</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=11-08-2002" target="_blank">11-08-2002</a> đến <a href="/xo-so-truyen-thong.php?ngay=07-09-2002" target="_blank">07-09-2002</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/13-01-2021.html" target="_blank">13-01-2021</a> - (0 lượt quay trước)</td>
+                            </tr>
+                            <tr id="30" style="display: table-row;">
+                                <td><b>30</b></td>
+                                <td>29</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=10-09-2015" target="_blank">10-09-2015</a> đến <a href="/xo-so-truyen-thong.php?ngay=10-10-2015" target="_blank">10-10-2015</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/11-01-2021.html" target="_blank">11-01-2021</a> - (2 lượt quay trước)</td>
+                            </tr>
+                            <tr id="92" style="display: table-row;">
+                                <td><b>92</b></td>
+                                <td>31</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=04-10-2006" target="_blank">04-10-2006</a> đến <a href="/xo-so-truyen-thong.php?ngay=05-11-2006" target="_blank">05-11-2006</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/12-01-2021.html" target="_blank">12-01-2021</a> - (1 lượt quay trước)</td>
+                            </tr>
+                            <tr id="93" style="display: table-row;">
+                                <td><b>93</b></td>
+                                <td>31</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=03-09-2002" target="_blank">03-09-2002</a> đến <a href="/xo-so-truyen-thong.php?ngay=05-10-2002" target="_blank">05-10-2002</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/07-01-2021.html" target="_blank">07-01-2021</a> - (6 lượt quay trước)</td>
+                            </tr>
+                            <tr id="94" style="display: table-row;">
+                                <td><b>94</b></td>
+                                <td>32</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=07-07-2011" target="_blank">07-07-2011</a> đến <a href="/xo-so-truyen-thong.php?ngay=09-08-2011" target="_blank">09-08-2011</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/08-01-2021.html" target="_blank">08-01-2021</a> - (5 lượt quay trước)</td>
+                            </tr>
+                            <tr id="95" style="display: table-row;">
+                                <td><b>95</b></td>
+                                <td>27</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=15-07-2002" target="_blank">15-07-2002</a> đến <a href="/xo-so-truyen-thong.php?ngay=12-08-2002" target="_blank">12-08-2002</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/13-01-2021.html" target="_blank">13-01-2021</a> - (0 lượt quay trước)</td>
+                            </tr>
+                            <tr id="96" style="display: table-row;">
+                                <td><b>96</b></td>
+                                <td>28</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=25-05-2015" target="_blank">25-05-2015</a> đến <a href="/xo-so-truyen-thong.php?ngay=23-06-2015" target="_blank">23-06-2015</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/06-01-2021.html" target="_blank">06-01-2021</a> - (7 lượt quay trước)</td>
+                            </tr>
+                            <tr id="97" style="display: table-row;">
+                                <td><b>97</b></td>
+                                <td>25</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=30-09-2003" target="_blank">30-09-2003</a> đến <a href="/xo-so-truyen-thong.php?ngay=26-10-2003" target="_blank">26-10-2003</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/06-01-2021.html" target="_blank">06-01-2021</a> - (7 lượt quay trước)</td>
+                            </tr>
+                            <tr id="98" style="display: table-row;">
+                                <td><b>98</b></td>
+                                <td>26</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=12-12-2010" target="_blank">12-12-2010</a> đến <a href="/xo-so-truyen-thong.php?ngay=08-01-2011" target="_blank">08-01-2011</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/08-01-2021.html" target="_blank">08-01-2021</a> - (5 lượt quay trước)</td>
+                            </tr>
+                            <tr id="99" style="display: table-row;">
+                                <td><b>99</b></td>
+                                <td>26</td>
+                                <td>từ <a href="/xo-so-truyen-thong.php?ngay=25-06-2002" target="_blank">25-06-2002</a> đến <a href="/xo-so-truyen-thong.php?ngay=22-07-2002" target="_blank">22-07-2002</a></td>
+                                <td><a href="/xổ-số-Truyền-Thống/13-01-2021.html" target="_blank">13-01-2021</a> - (0 lượt quay trước)</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
+
         </div>
         <div class="col-sm-3">
             <div class="kqvertimarginw-wrapprer-right">
@@ -997,6 +822,6 @@
     gtag("config", "UA-148914329-1");
 </script>
 <script src="js/custom.js"></script>
-<script src="js/soketqua.js"></script>
+<script src="js/thongke-chuky-v1.js"></script>
 </body>
 </html>

@@ -913,3 +913,31 @@ legend .newsh3 {
     border-radius: 4px;
     direction: ltr;
 }
+
+/* Tan so */
+tr.tansuatrow.danghov>td:not(.darkgb),
+td.verti-hov:not(.darkgb) {
+    background-color:#ffeaa6
+}
+
+td.darkgb {
+    background-color: gray;
+}
+
+.scroll .table-bordered>tbody>tr>td {
+    border: solid;
+    border-width: 1px;
+    border-color: #666;
+}
+
+/* Tan suat */
+table.bangts>tbody>tr>td {
+    min-width: 25px;
+    max-width: 25px;
+    max-height: 25px;
+    min-height: 25px;
+}
+
+.table .tansuatrow {
+    height: auto;
+}
