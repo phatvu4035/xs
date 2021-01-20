@@ -2089,7 +2089,6 @@ ul.more-news li a img {
 }
 .table tr {
     height: 35px;
-    text-align: center;
 }
 .table thead {
     background: #fafafa;
@@ -2193,10 +2192,6 @@ ul.more-news li a img {
 .table-tructiep .table thead tr th:first-child {
     border-left: none;
 }
-.dd-loto-widget table tr:nth-child(even),
-.table tr:nth-child(even) {
-    background: #f9f9f9;
-}
 
 .copyright-info {
     margin-bottom: 10px;
@@ -2213,4 +2208,8 @@ ul.more-news li a img {
 .marh3 {
     margin-top: 20px;
     margin-bottom: 10px;
+}
+
+.kqbackground b {
+    font-weight: bold;
 }

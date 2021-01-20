@@ -28,6 +28,7 @@
     <link href="css/metisMenu.css" rel="stylesheet">
     <link href="css/bootstrap-datepicker3.min.css" rel="stylesheet">
     <link href="css/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+    <link href="css/bootstrap-toggle.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.v6.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/_bootstrap_custom.css"/>
     <link href="css/global_v0.0.9.css" rel="stylesheet">
@@ -193,354 +194,102 @@
         <div class="col-sm-7">
             <div class="panel panel-default">
                 <div class="panel-heading center">
-                    <h4 class="right-menu-title">Thống kê loto Gan</h4>
+                    <h4 class="right-menu-title">Thống kê chu kỳ dàn đặc biệt</h4>
                 </div>
                 <div class="panel-body">
-                    <form method="POST" id="main_form">
-                        <div class="row">
-                            <div class="form-group col-sm-3 daudong">
-                                <label for="code">Tỉnh</label>
-                                <select name="code" id="code" class="form-control">
-                                    <option value="mb" selected="">Truyền Thống</option>
-                                    <option value="ag">An Giang</option>
-                                    <option value="bl">Bạc Liêu</option>
-                                    <option value="bdu">Bình Dương</option>
-                                    <option value="bdi">Bình Định</option>
-                                    <option value="bp">Bình Phước</option>
-                                    <option value="bth">Bình Thuận</option>
-                                    <option value="btr">Bến Tre</option>
-                                    <option value="cm">Cà Mau</option>
-                                    <option value="ct">Cần Thơ</option>
-                                    <option value="dlt">Đà Lạt</option>
-                                    <option value="dna">Đà Nẵng</option>
-                                    <option value="dlc">Đắc Lắc</option>
-                                    <option value="dno">Đắc Nông</option>
-                                    <option value="dni">Đồng Nai</option>
-                                    <option value="dt">Đồng Tháp</option>
-                                    <option value="gl">Gia Lai</option>
-                                    <option value="hg">Hậu Giang</option>
-                                    <option value="hcm">Hồ Chí Minh</option>
-                                    <option value="kg">Kiên Giang</option>
-                                    <option value="kh">Khánh Hoà</option>
-                                    <option value="kt">Kon Tum</option>
-                                    <option value="la">Long An</option>
-                                    <option value="nt">Ninh Thuận</option>
-                                    <option value="py">Phú Yên</option>
-                                    <option value="qb">Quảng Bình</option>
-                                    <option value="qna">Quảng Nam</option>
-                                    <option value="qng">Quảng Ngãi</option>
-                                    <option value="qt">Quảng Trị</option>
-                                    <option value="st">Sóc Trăng</option>
-                                    <option value="tn">Tây Ninh</option>
-                                    <option value="tth">Thừa Thiên Huế</option>
-                                    <option value="tg">Tiền Giang</option>
-                                    <option value="tv">Trà Vinh</option>
-                                    <option value="vl">Vĩnh Long</option>
-                                    <option value="vt">Vũng Tàu</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-2 form-group daudong">
-                                <label for="begin_date">Từ ngày</label>
-                                <input type="text" class="form-control" id="begin_date" name="begin_date" />
-                            </div>
-                            <div class="col-sm-2 form-group daudong">
-                                <label for="end_date">Đến ngày</label>
-                                <input type="text" class="form-control" id="end_date" name="end_date" />
-                            </div>
-                            <div class="col-sm-2 form-group daudong">
-                                <label for="count">Biên độ gan</label>
-                                <input type="text" class="form-control" id="day_count" name="day_count" placeholder="Biên độ gan" value="10" />
+                    <form class="form-horizontal" method="POST" id="main_form">
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="code" class="col-sm-1 control-label">Tỉnh</label>
+                                <div class="col-sm-2">
+                                    <select name="code" id="code" class="form-control">
+                                        <option value="mb" selected="">Truyền Thống</option>
+                                        <option value="ag">An Giang</option>
+                                        <option value="bl">Bạc Liêu</option>
+                                        <option value="bdu">Bình Dương</option>
+                                        <option value="bdi">Bình Định</option>
+                                        <option value="bp">Bình Phước</option>
+                                        <option value="bth">Bình Thuận</option>
+                                        <option value="btr">Bến Tre</option>
+                                        <option value="cm">Cà Mau</option>
+                                        <option value="ct">Cần Thơ</option>
+                                        <option value="dlt">Đà Lạt</option>
+                                        <option value="dna">Đà Nẵng</option>
+                                        <option value="dlc">Đắc Lắc</option>
+                                        <option value="dno">Đắc Nông</option>
+                                        <option value="dni">Đồng Nai</option>
+                                        <option value="dt">Đồng Tháp</option>
+                                        <option value="gl">Gia Lai</option>
+                                        <option value="hg">Hậu Giang</option>
+                                        <option value="hcm">Hồ Chí Minh</option>
+                                        <option value="kg">Kiên Giang</option>
+                                        <option value="kh">Khánh Hoà</option>
+                                        <option value="kt">Kon Tum</option>
+                                        <option value="la">Long An</option>
+                                        <option value="nt">Ninh Thuận</option>
+                                        <option value="py">Phú Yên</option>
+                                        <option value="qb">Quảng Bình</option>
+                                        <option value="qna">Quảng Nam</option>
+                                        <option value="qng">Quảng Ngãi</option>
+                                        <option value="qt">Quảng Trị</option>
+                                        <option value="st">Sóc Trăng</option>
+                                        <option value="tn">Tây Ninh</option>
+                                        <option value="tth">Thừa Thiên Huế</option>
+                                        <option value="tg">Tiền Giang</option>
+                                        <option value="tv">Trà Vinh</option>
+                                        <option value="vl">Vĩnh Long</option>
+                                        <option value="vt">Vũng Tàu</option>
+                                    </select>
+                                </div>
+                                <label for="code" class="col-sm-1 control-label">Từ</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="begin_date" name="begin_date" />
+                                </div>
+                                <label for="code" class="col-sm-1 control-label">Đến</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="end_date" name="end_date" />
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-2 offset-sm-4">
-                            <button type="submit" class="btn btn-primary col-sm-12"><i class="fa fa-eye"></i> Xem kết quả</button>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="code" class="col-sm-2 control-label">Dàn loto</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="numbers" name="numbers" placeholder="Dàn (ngăn bằng dấu phẩy)" value="24, 67" />
+                                </div>
+                                <div class="col-sm-2">
+                                    <label>Cùng về</label>
+                                    <input type="checkbox" data-toggle="toggle" data-size="mini" data-onstyle="primary" data-style="ios" id="together" name="together">
+                                </div>
+                                <div class="col-sm-2">
+                                    <button type="submit" class="btn btn-primary">Xem kết quả</button>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="kqbackground vien">
-                <div class="panel panel-default">
-                    <div class="panel-heading center"><h4 class="right-menu-title">Thống kê loto gan Truyền Thống</h4></div>
-                    <div class="panel-body">
-                        <div class="kqbackground">
-                            <h4>Các bộ số chưa ra theo biên độ <span class="maudo">10</span> ngày trở lên</h4>
-                            <ul class="pad40-left list-style-disc mgb10">
-                                <li>
-                                    Bộ số <span class="maudo vietdam">18</span> ra ngày <a href="/xo-so-truyen-thong.php?ngay=07-01-2021" target="_blank">07-01-2021</a>, đến ngày <a href="/xo-so-truyen-thong.php?ngay=17-01-2021">17-01-2021</a> vẫn chưa ra
-                                    <b class="maudo vietdam">10</b> ngày
-                                </li>
-                                <li>
-                                    Bộ số <span class="maudo vietdam">45</span> ra ngày <a href="/xo-so-truyen-thong.php?ngay=07-01-2021" target="_blank">07-01-2021</a>, đến ngày <a href="/xo-so-truyen-thong.php?ngay=17-01-2021">17-01-2021</a> vẫn chưa ra
-                                    <b class="maudo vietdam">10</b> ngày
-                                </li>
-                                <li>
-                                    Bộ số <span class="maudo vietdam">57</span> ra ngày <a href="/xo-so-truyen-thong.php?ngay=07-01-2021" target="_blank">07-01-2021</a>, đến ngày <a href="/xo-so-truyen-thong.php?ngay=17-01-2021">17-01-2021</a> vẫn chưa ra
-                                    <b class="maudo vietdam">10</b> ngày
-                                </li>
-                                <li>
-                                    Bộ số <span class="maudo vietdam">81</span> ra ngày <a href="/xo-so-truyen-thong.php?ngay=07-01-2021" target="_blank">07-01-2021</a>, đến ngày <a href="/xo-so-truyen-thong.php?ngay=17-01-2021">17-01-2021</a> vẫn chưa ra
-                                    <b class="maudo vietdam">10</b> ngày
-                                </li>
-                                <li>
-                                    Bộ số <span class="maudo vietdam">21</span> ra ngày <a href="/xo-so-truyen-thong.php?ngay=06-01-2021" target="_blank">06-01-2021</a>, đến ngày <a href="/xo-so-truyen-thong.php?ngay=17-01-2021">17-01-2021</a> vẫn chưa ra
-                                    <b class="maudo vietdam">11</b> ngày
-                                </li>
-                                <li>
-                                    Bộ số <span class="maudo vietdam">39</span> ra ngày <a href="/xo-so-truyen-thong.php?ngay=04-01-2021" target="_blank">04-01-2021</a>, đến ngày <a href="/xo-so-truyen-thong.php?ngay=17-01-2021">17-01-2021</a> vẫn chưa ra
-                                    <b class="maudo vietdam">13</b> ngày
-                                </li>
-                            </ul>
-                        </div>
-                        <table class="table table-condensed table-bordered table-kq-hover">
-                            <tbody>
-                            <tr class="info kqbackground vietdam">
-                                <td>Bộ số</td>
-                                <td><b>00</b></td>
-                                <td><b>01</b></td>
-                                <td><b>02</b></td>
-                                <td><b>03</b></td>
-                                <td><b>04</b></td>
-                                <td><b>05</b></td>
-                                <td><b>06</b></td>
-                                <td><b>07</b></td>
-                                <td><b>08</b></td>
-                                <td><b>09</b></td>
-                                <td><b>10</b></td>
-                                <td><b>11</b></td>
-                                <td><b>12</b></td>
-                                <td><b>13</b></td>
-                                <td><b>14</b></td>
-                                <td><b>15</b></td>
-                                <td><b>16</b></td>
-                                <td><b>17</b></td>
-                                <td><b>18</b></td>
-                                <td><b>19</b></td>
-                            </tr>
-                            <tr class="kqbackground table-kq-hover">
-                                <td>Max gan</td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 10-07-2018 đến 08-08-2018">28</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 05-03-2018 đến 30-03-2018">24</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 03-07-2017 đến 26-07-2017">22</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 05-06-2019 đến 01-07-2019">25</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 23-11-2016 đến 28-12-2016">34</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 30-07-2018 đến 23-08-2018">23</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 12-06-2016 đến 07-07-2016">24</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 14-11-2015 đến 04-12-2015">19</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 13-07-2017 đến 04-08-2017">21</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 23-04-2019 đến 18-05-2019">24</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 07-12-2016 đến 10-01-2017">33</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 28-06-2018 đến 26-07-2018">27</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 07-06-2018 đến 01-07-2018">23</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 13-01-2018 đến 06-02-2018">23</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 13-01-2020 đến 20-02-2020">33</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 13-08-2019 đến 10-09-2019">27</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 29-08-2014 đến 19-09-2014">20</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 20-08-2017 đến 19-09-2017">29</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 16-09-2015 đến 17-10-2015">30</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 11-08-2017 đến 01-09-2017">20</span></td>
-                            </tr>
-                            <tr>
-                                <td colspan="21" class="cau-khong-ton-tai" style="height: 20px;"></td>
-                            </tr>
-                            <tr class="info kqbackground vietdam">
-                                <td>Bộ số</td>
-                                <td><b>20</b></td>
-                                <td><b>21</b></td>
-                                <td><b>22</b></td>
-                                <td><b>23</b></td>
-                                <td><b>24</b></td>
-                                <td><b>25</b></td>
-                                <td><b>26</b></td>
-                                <td><b>27</b></td>
-                                <td><b>28</b></td>
-                                <td><b>29</b></td>
-                                <td><b>30</b></td>
-                                <td><b>31</b></td>
-                                <td><b>32</b></td>
-                                <td><b>33</b></td>
-                                <td><b>34</b></td>
-                                <td><b>35</b></td>
-                                <td><b>36</b></td>
-                                <td><b>37</b></td>
-                                <td><b>38</b></td>
-                                <td><b>39</b></td>
-                            </tr>
-                            <tr class="kqbackground table-kq-hover">
-                                <td>Max gan</td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 14-07-2020 đến 08-08-2020">24</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 10-05-2016 đến 08-06-2016">28</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 06-10-2016 đến 31-10-2016">24</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 20-10-2020 đến 15-11-2020">25</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 01-05-2015 đến 27-05-2015">25</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 30-09-2016 đến 23-10-2016">22</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 25-05-2017 đến 23-06-2017">28</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 14-02-2014 đến 09-03-2014">22</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 15-07-2015 đến 15-08-2015">30</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 14-03-2017 đến 09-04-2017">25</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 10-09-2015 đến 10-10-2015">29</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 09-12-2019 đến 02-01-2020">23</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 23-09-2020 đến 18-10-2020">24</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 31-10-2018 đến 21-11-2018">20</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 25-03-2018 đến 18-04-2018">23</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 19-04-2018 đến 25-05-2018">35</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 13-11-2016 đến 11-12-2016">27</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 24-06-2018 đến 18-07-2018">23</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 03-07-2016 đến 30-07-2016">26</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 17-06-2014 đến 26-07-2014">38</span></td>
-                            </tr>
-                            <tr>
-                                <td colspan="21" class="cau-khong-ton-tai" style="height: 20px;"></td>
-                            </tr>
-                            <tr class="info kqbackground vietdam">
-                                <td>Bộ số</td>
-                                <td><b>40</b></td>
-                                <td><b>41</b></td>
-                                <td><b>42</b></td>
-                                <td><b>43</b></td>
-                                <td><b>44</b></td>
-                                <td><b>45</b></td>
-                                <td><b>46</b></td>
-                                <td><b>47</b></td>
-                                <td><b>48</b></td>
-                                <td><b>49</b></td>
-                                <td><b>50</b></td>
-                                <td><b>51</b></td>
-                                <td><b>52</b></td>
-                                <td><b>53</b></td>
-                                <td><b>54</b></td>
-                                <td><b>55</b></td>
-                                <td><b>56</b></td>
-                                <td><b>57</b></td>
-                                <td><b>58</b></td>
-                                <td><b>59</b></td>
-                            </tr>
-                            <tr class="kqbackground table-kq-hover">
-                                <td>Max gan</td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 01-10-2018 đến 28-10-2018">26</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 22-10-2019 đến 24-11-2019">32</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 25-08-2017 đến 20-09-2017">25</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 28-05-2014 đến 17-06-2014">19</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 29-04-2016 đến 30-05-2016">30</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 07-06-2015 đến 29-06-2015">21</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 12-07-2014 đến 07-08-2014">25</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 04-12-2016 đến 03-01-2017">29</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 08-08-2016 đến 05-09-2016">27</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 03-11-2015 đến 27-11-2015">23</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 26-08-2018 đến 22-09-2018">26</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 04-10-2019 đến 31-10-2019">26</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 30-11-2019 đến 23-12-2019">22</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 23-10-2019 đến 18-11-2019">25</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 09-04-2015 đến 02-05-2015">22</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 11-09-2020 đến 24-10-2020">42</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 16-12-2020 đến 09-01-2021">23</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 28-03-2014 đến 28-04-2014">30</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 01-01-2018 đến 06-02-2018">35</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 05-05-2015 đến 26-05-2015">20</span></td>
-                            </tr>
-                            <tr>
-                                <td colspan="21" class="cau-khong-ton-tai" style="height: 20px;"></td>
-                            </tr>
-                            <tr class="info kqbackground vietdam">
-                                <td>Bộ số</td>
-                                <td><b>60</b></td>
-                                <td><b>61</b></td>
-                                <td><b>62</b></td>
-                                <td><b>63</b></td>
-                                <td><b>64</b></td>
-                                <td><b>65</b></td>
-                                <td><b>66</b></td>
-                                <td><b>67</b></td>
-                                <td><b>68</b></td>
-                                <td><b>69</b></td>
-                                <td><b>70</b></td>
-                                <td><b>71</b></td>
-                                <td><b>72</b></td>
-                                <td><b>73</b></td>
-                                <td><b>74</b></td>
-                                <td><b>75</b></td>
-                                <td><b>76</b></td>
-                                <td><b>77</b></td>
-                                <td><b>78</b></td>
-                                <td><b>79</b></td>
-                            </tr>
-                            <tr class="kqbackground table-kq-hover">
-                                <td>Max gan</td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 04-09-2015 đến 27-09-2015">22</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 14-02-2016 đến 04-03-2016">18</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 24-07-2017 đến 22-08-2017">28</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 17-06-2020 đến 18-07-2020">30</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 14-09-2018 đến 10-10-2018">25</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 06-05-2017 đến 05-06-2017">29</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 16-11-2014 đến 16-12-2014">29</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 21-02-2020 đến 17-03-2020">24</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 28-05-2017 đến 18-06-2017">20</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 07-06-2019 đến 10-07-2019">32</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 11-11-2019 đến 04-12-2019">22</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 17-03-2014 đến 11-04-2014">24</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 18-02-2016 đến 10-03-2016">20</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 11-10-2020 đến 01-11-2020">20</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 04-04-2016 đến 11-05-2016">36</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 18-07-2014 đến 10-08-2014">22</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 23-08-2020 đến 17-09-2020">24</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 03-09-2020 đến 25-09-2020">21</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 02-09-2017 đến 06-10-2017">33</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 11-03-2019 đến 04-04-2019">23</span></td>
-                            </tr>
-                            <tr>
-                                <td colspan="21" class="cau-khong-ton-tai" style="height: 20px;"></td>
-                            </tr>
-                            <tr class="info kqbackground vietdam">
-                                <td>Bộ số</td>
-                                <td><b>80</b></td>
-                                <td><b>81</b></td>
-                                <td><b>82</b></td>
-                                <td><b>83</b></td>
-                                <td><b>84</b></td>
-                                <td><b>85</b></td>
-                                <td><b>86</b></td>
-                                <td><b>87</b></td>
-                                <td><b>88</b></td>
-                                <td><b>89</b></td>
-                                <td><b>90</b></td>
-                                <td><b>91</b></td>
-                                <td><b>92</b></td>
-                                <td><b>93</b></td>
-                                <td><b>94</b></td>
-                                <td><b>95</b></td>
-                                <td><b>96</b></td>
-                                <td><b>97</b></td>
-                                <td><b>98</b></td>
-                                <td><b>99</b></td>
-                            </tr>
-                            <tr class="kqbackground table-kq-hover">
-                                <td>Max gan</td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 07-10-2014 đến 28-10-2014">20</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 30-03-2014 đến 22-04-2014">22</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 23-04-2016 đến 14-05-2016">20</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 06-07-2016 đến 03-08-2016">27</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 01-06-2014 đến 01-07-2014">29</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 16-02-2014 đến 14-03-2014">25</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 08-11-2016 đến 07-12-2016">28</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 28-09-2014 đến 22-10-2014">23</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 24-09-2014 đến 16-10-2014">21</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 21-04-2017 đến 15-05-2017">23</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 09-03-2017 đến 02-04-2017">23</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 19-08-2014 đến 14-09-2014">25</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 04-04-2014 đến 28-04-2014">23</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 04-04-2018 đến 28-04-2018">23</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 24-07-2020 đến 17-08-2020">23</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 11-04-2014 đến 09-05-2014">27</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 25-05-2015 đến 23-06-2015">28</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 02-05-2018 đến 28-05-2018">25</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 10-11-2015 đến 05-12-2015">24</span></td>
-                                <td><span class="target_tooltip" data-toggle="tooltip" data-original-title="Từ 21-12-2020 đến 13-01-2021">22</span></td>
-                            </tr>
-                            </tbody>
-                        </table>
+
+            <div class="panel panel-default">
+                <div class="panel-heading center"><h4 class="right-menu-title">Thống kê chu kỳ dàn đặc biệt Truyền Thống</h4></div>
+                <div class="panel-body">
+                    <div class="kqbackground daudong">
+                        <p>Dàn số <b class="maudo">34</b></p>
+                        <p>Dữ liệu kết quả đặc biệt Truyền Thống từ ngày <a href="/xo-so-truyen-thong.php?ngay=01-01-2000">01-01-2000</a> đến ngày <a href="/xo-so-truyen-thong.php?ngay=19-01-2021">19-01-2021</a></p>
+                        <p>
+                            Ngưỡng cực đại không xuất hiện dàn số là <b class="maudo">356</b> ngày (kể cả ngày về), từ <a href="/xo-so-truyen-thong.php?ngay=22-09-2014" target="_blank">22-09-2014</a> (giải đặc biệt - <span class="giaidb">03334</span>)
+                            đến <a href="/xo-so-truyen-thong.php?ngay=17-09-2015" target="_blank">17-09-2015</a> (giải đặc biệt - <span class="giaidb">80834</span>)
+                        </p>
+                        <p>Lần xuất hiện sau cùng của 1 số thuộc dàn trong khoảng ngày bạn chọn là <a href="/xo-so-truyen-thong.php?ngay=19-07-2020" target="_blank">19-07-2020</a> (giải đặc biệt - <span class="giaidb">08834</span>)</p>
+                        <p>
+                            Điểm gan đến nay là: <span class="rs_0 maudo vietdam">183</span> ngày (Không tính ngày về gần nhất), là ngày: <a href="/xo-so-truyen-thong.php?ngay=19-07-2020" target="_blank">19-07-2020</a> (giải đặc biệt -
+                            <span class="giaidb">08834</span>)
+                        </p>
                     </div>
                 </div>
-
             </div>
+
+
         </div>
         <div class="col-sm-3">
             <div class="kqvertimarginw-wrapprer-right">
@@ -872,6 +621,7 @@
 <div style="position: fixed; top: 174px; right: 50%; margin-right: -635px;"></div>
 <div style="position: fixed; bottom: 0px; text-align: center; width: 100%;"></div>
 <script src="js/libs/bootstrap-datepicker.min.js" type="text/javascript"></script>
+<script src="js/libs/bootstrap-toggle.min.js" type="text/javascript"></script>
 <script src="js/libs/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
 <script src="js/libs/bootstrap-datepicker.vi.min.js" type="text/javascript"></script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-148914329-1"></script>
@@ -886,6 +636,6 @@
     gtag("config", "UA-148914329-1");
 </script>
 <script src="js/custom.js"></script>
-<script src="js/thongke_loto-gan.js"></script>
+<script src="js/thongke-chu-ky-dan-dac-biet.js"></script>
 </body>
 </html>

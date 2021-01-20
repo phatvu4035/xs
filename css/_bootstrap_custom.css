@@ -195,11 +195,15 @@ h1 {
     padding-top: 7px;
 }
 
-.form-horizontal label {
+label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: 5px;
     font-weight: bold;
+}
+
+.toggle input[type=checkbox] {
+    display: none;
 }
 
 label {
@@ -210,3 +214,8 @@ label {
 
 }
 
+.btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}

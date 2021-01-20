@@ -941,3 +941,28 @@ table.bangts>tbody>tr>td {
 .table .tansuatrow {
     height: auto;
 }
+
+.kqbackground.table>thead>tr.info>th {
+    background-color: #d9edf7;
+}
+
+.kqbackground.table>thead>tr.info>td {
+    background-color: #d9edf7;
+}
+
+.table>tbody>tr>td.success {
+    background-color: #dff0d8;
+}
+
+.table-condensed>thead>tr>th, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>tbody>tr>td, .table-condensed>tfoot>tr>td {
+    padding: 3px;
+}
+
+/* bang-dac-biet */
+span.first-digit, span.last-digit, span.last-2-digit, span.sum-2-digit {
+    display: none;
+}
+
+table#dacbiettuan a{
+    color:#000
+}
