@@ -13,6 +13,7 @@
 .kqcenter {
     text-align: center;
     vertical-align: middle !important;
+    overflow: hidden;
 }
 a {
     color: blue;
