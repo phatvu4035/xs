@@ -308,6 +308,7 @@ nav#ketqua_head_menu {
 }
 .panel-body {
     padding: 5px !important;
+    overflow: hidden;
 }
 .border0 {
     border: none;
@@ -957,6 +958,10 @@ table.bangts>tbody>tr>td {
 
 .table-condensed>thead>tr>th, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>tbody>tr>td, .table-condensed>tfoot>tr>td {
     padding: 3px;
+}
+
+legend p {
+    font-size: 21px;
 }
 
 /* bang-dac-biet */

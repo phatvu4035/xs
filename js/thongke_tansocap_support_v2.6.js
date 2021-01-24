@@ -752,7 +752,7 @@ function show_hide_row(i, j, save_cookie) {
     }
     showing_selected[i] = j;
     if (save_cookie) {
-        Cookies.set(tsclt_se_cookie, showing_selected, { expires: 7 });
+        // Cookies.set(tsclt_se_cookie, showing_selected, { expires: 7 });
     }
     return true;
 }
@@ -765,7 +765,7 @@ function set_selected(obj) {
             showing_selected[num] = obj[num];
         }
     }
-    Cookies.set(tsclt_se_cookie, showing_selected, { expires: 7 });
+    // Cookies.set(tsclt_se_cookie, showing_selected, { expires: 7 });
     return true;
 }
 function set_view(method) {
@@ -794,10 +794,10 @@ function set_view(method) {
     return true;
 }
 $(document).ready(function () {
-    if (Cookies.get(tsclt_se_cookie) != undefined) {
-        set_selected(JSON.parse(Cookies.get(tsclt_se_cookie)));
-        console.log("Restored view from cookie");
-    }
+    // if (Cookies.get(tsclt_se_cookie) != undefined) {
+    //     set_selected(JSON.parse(Cookies.get(tsclt_se_cookie)));
+    //     console.log("Restored view from cookie");
+    // }
     $("tr.tansuatrow")
         .click(function () {
             console.log($(this));
