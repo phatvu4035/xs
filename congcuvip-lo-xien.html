@@ -27,7 +27,6 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/metisMenu.css" rel="stylesheet">
     <link href="css/bootstrap-datepicker3.min.css" rel="stylesheet">
-    <link href="css/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.v6.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/_bootstrap_custom.css"/>
     <link href="css/global_v0.0.9.css" rel="stylesheet">
@@ -193,97 +192,68 @@
         <div class="col-sm-7">
             <div class="panel panel-default">
                 <div class="panel-heading center">
-                    <h4 class="right-menu-title">Thống kê chu kỳ dàn đặc biệt</h4>
+                    <h4 class="right-menu-title">Ghép lô xiên tự động</h4>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" id="main_form">
+                    <form class="form-horizontal" id="chuky_form" method="POST">
                         <div class="form-group">
                             <div class="row">
-                                <label for="code" class="col-sm-1 control-label">Tỉnh</label>
-                                <div class="col-sm-2">
-                                    <select name="code" id="code" class="form-control">
-                                        <option value="mb" selected="">Truyền Thống</option>
-                                        <option value="ag">An Giang</option>
-                                        <option value="bl">Bạc Liêu</option>
-                                        <option value="bdu">Bình Dương</option>
-                                        <option value="bdi">Bình Định</option>
-                                        <option value="bp">Bình Phước</option>
-                                        <option value="bth">Bình Thuận</option>
-                                        <option value="btr">Bến Tre</option>
-                                        <option value="cm">Cà Mau</option>
-                                        <option value="ct">Cần Thơ</option>
-                                        <option value="dlt">Đà Lạt</option>
-                                        <option value="dna">Đà Nẵng</option>
-                                        <option value="dlc">Đắc Lắc</option>
-                                        <option value="dno">Đắc Nông</option>
-                                        <option value="dni">Đồng Nai</option>
-                                        <option value="dt">Đồng Tháp</option>
-                                        <option value="gl">Gia Lai</option>
-                                        <option value="hg">Hậu Giang</option>
-                                        <option value="hcm">Hồ Chí Minh</option>
-                                        <option value="kg">Kiên Giang</option>
-                                        <option value="kh">Khánh Hoà</option>
-                                        <option value="kt">Kon Tum</option>
-                                        <option value="la">Long An</option>
-                                        <option value="nt">Ninh Thuận</option>
-                                        <option value="py">Phú Yên</option>
-                                        <option value="qb">Quảng Bình</option>
-                                        <option value="qna">Quảng Nam</option>
-                                        <option value="qng">Quảng Ngãi</option>
-                                        <option value="qt">Quảng Trị</option>
-                                        <option value="st">Sóc Trăng</option>
-                                        <option value="tn">Tây Ninh</option>
-                                        <option value="tth">Thừa Thiên Huế</option>
-                                        <option value="tg">Tiền Giang</option>
-                                        <option value="tv">Trà Vinh</option>
-                                        <option value="vl">Vĩnh Long</option>
-                                        <option value="vt">Vũng Tàu</option>
-                                    </select>
+                                <label for="code" class="col-sm-2 control-label">Cách ghép</label>
+                                <div class="col-sm-1">
+                                    <select name="count" id="count" class="form-control">
+                                        <option value="2">2 số</option><option value="3">3 số</option><option value="4">4 số</option><option value="6">6 số</option><option value="8">8 số</option><option value="10">10 số</option> </select>
                                 </div>
-                                <label for="code" class="col-sm-1 control-label">Từ</label>
-                                <div class="col-sm-2">
-                                    <input type="text" class="form-control" id="begin_date" name="begin_date" />
-                                </div>
-                                <label for="code" class="col-sm-1 control-label">Đến</label>
-                                <div class="col-sm-2">
-                                    <input type="text" class="form-control" id="end_date" name="end_date" />
+                                <label for="numbers" class="col-sm-1 control-label">Bộ số</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" id="numbers" name="numbers" placeholder="Điền các bộ số để tạo lô xiên (ngăn bằng dấu phẩy hoặc cách)">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="row">
-                                <label for="code" class="col-sm-3 control-label">Dàn đặc biệt muốn thống kê</label>
-                                <div class="col-sm-4">
-                                    <input type="text" class="form-control" id="numbers" name="numbers" placeholder="Dàn (ngăn cách bằng dấu phẩy)" value="34" />
+                                <label for="numbers" class="col-sm-5 control-label">Ký tự phân cách lô xiên</label>
+                                <div class="col-sm-1">
+                                    <select name="output_delimiter" id="output_delimiter" class="form-control">
+                                        <option value="&amp;">&amp;</option>
+                                        <option value=" "> </option>
+                                        <option value=",">,</option>
+                                    </select>
                                 </div>
-                                <div class="col-sm-2">
-                                    <button type="submit" class="btn btn-primary active">Xem kết quả</button>
-                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="offset-sm-4 col-sm-5">
+                                <button type="submit" class="btn btn-primary active" onclick="if (!window.__cfRLUnblockHandlers) return false; return make_lo_xien();"><i class="fa fa-eye"></i> Xem kết quả</button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-
-            <div class="panel panel-default">
-                <div class="panel-heading center"><h4 class="right-menu-title">Thống kê chu kỳ dàn đặc biệt Truyền Thống</h4></div>
-                <div class="panel-body">
-                    <div class="kqbackground daudong">
-                        <p>Dàn số <b class="maudo">34</b></p>
-                        <p>Dữ liệu kết quả đặc biệt Truyền Thống từ ngày <a href="/xo-so-truyen-thong.php?ngay=01-01-2000">01-01-2000</a> đến ngày <a href="/xo-so-truyen-thong.php?ngay=19-01-2021">19-01-2021</a></p>
-                        <p>
-                            Ngưỡng cực đại không xuất hiện dàn số là <b class="maudo">356</b> ngày (kể cả ngày về), từ <a href="/xo-so-truyen-thong.php?ngay=22-09-2014" target="_blank">22-09-2014</a> (giải đặc biệt - <span class="giaidb">03334</span>)
-                            đến <a href="/xo-so-truyen-thong.php?ngay=17-09-2015" target="_blank">17-09-2015</a> (giải đặc biệt - <span class="giaidb">80834</span>)
-                        </p>
-                        <p>Lần xuất hiện sau cùng của 1 số thuộc dàn trong khoảng ngày bạn chọn là <a href="/xo-so-truyen-thong.php?ngay=19-07-2020" target="_blank">19-07-2020</a> (giải đặc biệt - <span class="giaidb">08834</span>)</p>
-                        <p>
-                            Điểm gan đến nay là: <span class="rs_0 maudo vietdam">183</span> ngày (Không tính ngày về gần nhất), là ngày: <a href="/xo-so-truyen-thong.php?ngay=19-07-2020" target="_blank">19-07-2020</a> (giải đặc biệt -
-                            <span class="giaidb">08834</span>)
-                        </p>
+            <div class="kqbackground vien">
+                <div class="panel panel-default">
+                    <div class="panel-heading center"><h4 class="right-menu-title">Ghép lô xiên tự động</h4></div>
+                    <div class="panel-body">
+                        <table class="table-kq-bold-border kqbackground table table-condensed table-bordered qtk-hover" id="loxien_table" style="">
+                            <thead>
+                            <tr class="info dosam">
+                                <th class="center" colspan="4">Lô xiên 2</th>
+                            </tr>
+                            </thead>
+                            <tbody class="center">
+                            <tr>
+                                <td>67 24 ;</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="info">
+                                <td class="chu17 vietdam dosam" colspan="4"><span class="mauden vietthuong chu15">Tổng số lô xiên tạo được là: </span>1</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-
 
         </div>
         <div class="col-sm-3">
@@ -616,7 +586,6 @@
 <div style="position: fixed; top: 174px; right: 50%; margin-right: -635px;"></div>
 <div style="position: fixed; bottom: 0px; text-align: center; width: 100%;"></div>
 <script src="js/libs/bootstrap-datepicker.min.js" type="text/javascript"></script>
-<script src="js/libs/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
 <script src="js/libs/bootstrap-datepicker.vi.min.js" type="text/javascript"></script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-148914329-1"></script>
 <script>
@@ -630,6 +599,6 @@
     gtag("config", "UA-148914329-1");
 </script>
 <script src="js/custom.js"></script>
-<script src="js/thongke-chu-ky-dan-dac-biet.js"></script>
+<script src="js/congcuvip-lo-xien.js"></script>
 </body>
 </html>

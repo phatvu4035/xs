@@ -76,7 +76,7 @@ function result_shortern(modal_search_string, province, new_length) {
                 } else {
                     full_result = current_full_length;
                 }
-                var new_text = full_result.substr(-1 * new_length);
+                var new_text = full_result.trim().substr(-1 * new_length);
                 target_cell.text(new_text);
             }
         }

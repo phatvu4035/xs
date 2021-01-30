@@ -13,8 +13,15 @@
 .kqcenter {
     text-align: center;
     vertical-align: middle !important;
-    overflow: hidden;
+    width: auto ;
+    max-width: initial;
 }
+
+.table-responsive.kqcenter {
+    display: table;
+}
+
+
 a {
     color: blue;
 }
@@ -971,4 +978,21 @@ span.first-digit, span.last-digit, span.last-2-digit, span.sum-2-digit {
 
 table#dacbiettuan a{
     color:#000
+}
+
+.chu22 .text-primary {
+    font-size: 22px;
+}
+
+.chu30 .text-primary {
+    font-size: 30px;
+}
+
+/* loto theo db*/
+
+
+
+/* tong hop cau */
+#result p {
+    margin: 0 0 10px;
 }
