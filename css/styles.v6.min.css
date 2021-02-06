@@ -1,4 +1,4 @@
-* {
+body {
     /*color: #414141;*/
     font-family: Arial, sans-serif;
     font-size: 14px;
@@ -2091,17 +2091,6 @@ ul.more-news li a img {
     float: left;
 }
 
-.table thead {
-    background: #fafafa;
-}
-.table tr th {
-    border: 1px solid #d9d9d9;
-    text-align: center !important;
-    font-weight: 700;
-}
-.table tr td {
-    border: 1px solid #e1e1e1;
-}
 .list-game {
     width: 100%;
 }

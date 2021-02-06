@@ -164,6 +164,31 @@ h1 {
     max-width: 10%;
 }
 
+table {
+    font-size: 14px;
+}
+
+h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h4, .h4 {
+    font-size: 18px;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+.visible-print-inline {
+    display: none !important;
+}
+
+.table {
+    width: 100%;
+}
+
 .table th, .table td {
     vertical-align: middle;
 }
@@ -218,6 +243,10 @@ label {
     color: #333;
     background-color: #e6e6e6;
     border-color: #adadad;
+}
+
+.table>thead>tr>td.info, .table>tbody>tr>td.info, .table>tfoot>tr>td.info, .table>thead>tr>th.info, .table>tbody>tr>th.info, .table>tfoot>tr>th.info, .table>thead>tr.info>td, .table>tbody>tr.info>td, .table>tfoot>tr.info>td, .table>thead>tr.info>th, .table>tbody>tr.info>th, .table>tfoot>tr.info>th {
+    background-color: #d9edf7;
 }
 
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
