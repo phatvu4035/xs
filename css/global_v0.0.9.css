@@ -994,3 +994,14 @@ table#dacbiettuan a{
 #result p {
     margin: 0 0 10px;
 }
+
+/* lich quay thuong */
+.lqt-table ul {
+    padding-inline-start: 40px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+table.qtk-hover.lqt-table tr:hover>td, table.qtk-hover-body-only.lqt-table tbody tr:hover>td {
+    background-color: #ffbf00;
+}

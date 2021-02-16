@@ -18,7 +18,7 @@ $(function () {
         var pageUrl = new URL(window.location.href);
         var searchParams = new URLSearchParams(pageUrl.search);
         var ngay = searchParams.get("ngay");
-        $('#left_date').datepicker('update',ngay);
+        $('#left_date').datepicker('update','16-02-2021');
     });
 });
 
